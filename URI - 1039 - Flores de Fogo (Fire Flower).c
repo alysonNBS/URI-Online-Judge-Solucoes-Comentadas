@@ -71,5 +71,5 @@ int main(void)
 
 int distancia_quadrada( ponto *p1, ponto *p2 )
 {
-	return (*p1->x - *p2->x) * (*p1->x - *p2->x) + (*p1->y - *p2->y) * (*p1->y - *p2->y);
+	return (*p1->x - *p2->x) * (*p1->x - *p2->x) + (*p1->y - *p2->y) * (*p1->y - *p2->y); // Equação da distância entre pontos d^2 = (x0 - x1)^2 + (y0 - y1)^2
 }
