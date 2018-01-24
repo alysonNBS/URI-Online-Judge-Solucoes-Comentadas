@@ -18,7 +18,7 @@
 *
 * Idéia para resolver o problema:
 *
-* Para cada entrada, armazena os dados es estruturas de circuferencias e realiza o seguinte teste:
+* Para cada entrada, armazena os dados em estruturas de circuferencias e realiza o seguinte teste:
 *
 * (Distância_entre_centros) <= (Raio_Homem - Raio_Flor)
 *
@@ -50,7 +50,8 @@ int main(void)
 	int r1, x1, y1, r2, x2, y2;
 	circuferencia homem, flor;
 
-	while( scanf("%d %d %d %d %d %d", &r1, &x1, &y1, &r2, &x2, &y2) != EOF ) // o bloco será repetido enquanto o input não estiver vazio, ou seja, enquanto a função scanf não retorna EOF (End Of File)
+	// o bloco será repetido enquanto o input não estiver vazio, ou seja, enquanto a função scanf não retorna EOF (End Of File)
+	while( scanf("%d %d %d %d %d %d", &r1, &x1, &y1, &r2, &x2, &y2) != EOF )
 	{
 		homem.raio = &r1;
 		homem.centro.x = &x1;
@@ -60,7 +61,8 @@ int main(void)
 		flor.centro.y = &y2;
 
 
-		if ( (*homem.raio >= *flor.raio) && (distancia_quadrada( &homem.centro, &flor.centro ) <= (*homem.raio - *flor.raio) * (*homem.raio - *flor.raio) ) )
+		if ( (*homem.raio >= *flor.raio) &&
+			 (distancia_quadrada( &homem.centro, &flor.centro ) <= (*homem.raio - *flor.raio) * (*homem.raio - *flor.raio) ) )
 			printf("RICO\n");
 		else
 			printf("MORTO\n");
@@ -71,5 +73,6 @@ int main(void)
 
 int distancia_quadrada( ponto *p1, ponto *p2 )
 {
-	return (*p1->x - *p2->x) * (*p1->x - *p2->x) + (*p1->y - *p2->y) * (*p1->y - *p2->y); // Equação da distância entre pontos d^2 = (x0 - x1)^2 + (y0 - y1)^2
+	// Equação da distância entre pontos d^2 = (x0 - x1)^2 + (y0 - y1)^2
+	return (*p1->x - *p2->x) * (*p1->x - *p2->x) + (*p1->y - *p2->y) * (*p1->y - *p2->y);
 }
