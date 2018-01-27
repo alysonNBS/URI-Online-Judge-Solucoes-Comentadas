@@ -1,5 +1,5 @@
 /*
-* Solução de alysonNBS
+* By @alysonNBS
 * Problema 1169 do site www.urionlinejudge.com.br
 * Link do problema (em inglês): https://www.urionlinejudge.com.br/judge/en/problems/view/1169
 */
